@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- 이 xml부분은 싱글톤으로 객체를 찍어내는곳이니 여기서 객체생성하면 하나의객체로 싱글톤이 적용됨 -->
+	<bean id="dataSource" class="oracle.jdbc.pool.OracleDataSource">
+		<property name="URL" value="jdbc:oracle:thin:@localhost:1521:xe"/>
+		<property name="user" value="scott"/>
+		<property name="password" value="tiger"/>
+	</bean>
+	<bean id="dao" class="com.bit.model.Emp02Dao">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+
+	<!-- HandlerMapping xml파일이나 properties 파일로 맵핑설정했었는데 그기능을 설정하는부분 여러개가있음-->
+	<bean id="handlerMapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"></bean>
+	
+	<!-- 컨트롤러를 특정 url로 설정해주는곳 프로퍼티에 위에 찍어낸 dao를 넣고 해당 클래스에서 셋터로 받아냄 
+	name은 셋터를호출 ref는 위의 다오id-->
+	<bean name="/index.bit" class="com.bit.controller.IndexController"></bean>
+	<bean name="/list.bit" class="com.bit.controller.ListController">
+		<property name="dao" ref="dao"/>
+	</bean>
+	
+	<!-- ViewResolver 컨트롤러를 클래스로 빼서 작업했는데 그쪽부분 화면출력 담당(forward,redirect 하는곳)-->
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/view/"/>
+		<property name="suffix" value=".jsp"/>
+	</bean>
+
+</beans>

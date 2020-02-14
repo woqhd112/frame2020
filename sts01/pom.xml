@@ -5,6 +5,42 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <name>sts01</name>
+  <dependencies>
+  	<!-- https://mvnrepository.com/artifact/org.springframework/spring-context 
+  	자바만을 위한 spring context 필수-->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-context</artifactId>
+	    <version>3.1.4.RELEASE</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-core 
+	spring context를 등록했으면 굳이 안넣어도됨-->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-core</artifactId>
+	    <version>3.1.4.RELEASE</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-web
+	spring web mvc를 등록했으면 굳이 안넣어도됨 -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-web</artifactId>
+	    <version>3.1.4.RELEASE</version>
+	</dependency>
+  	<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc 
+  	웹을위한 spring web mvc 필수-->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-webmvc</artifactId>
+	    <version>3.1.4.RELEASE</version>
+	</dependency>
+
+	<dependency>
+		<groupId>com.oracle.jdbc</groupId>
+		<artifactId>ojdbc14</artifactId>
+		<version>10.2.0.1.0</version>
+	</dependency>
+  </dependencies>
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
