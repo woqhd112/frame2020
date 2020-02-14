@@ -22,6 +22,22 @@
 	<bean name="/list.bit" class="com.bit.controller.ListController">
 		<property name="dao" ref="dao"/>
 	</bean>
+	<bean name="/add.bit" class="com.bit.controller.AddController"></bean>
+	<bean name="/insert.bit" class="com.bit.controller.InsertController">
+		<property name="dao" ref="dao"/>
+	</bean>
+	<bean name="/detail.bit" class="com.bit.controller.DetailController">
+		<property name="dao" ref="dao"/>
+	</bean>
+	<bean name="/edit.bit" class="com.bit.controller.EditController">
+		<property name="dao" ref="dao"/>
+	</bean>
+	<bean name="/update.bit" class="com.bit.controller.UpdateController">
+		<property name="dao" ref="dao"/>
+	</bean>
+	<bean name="/delete.bit" class="com.bit.controller.DeleteController">
+		<property name="dao" ref="dao"></property>
+	</bean>
 	
 	<!-- ViewResolver 컨트롤러를 클래스로 빼서 작업했는데 그쪽부분 화면출력 담당(forward,redirect 하는곳)-->
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">

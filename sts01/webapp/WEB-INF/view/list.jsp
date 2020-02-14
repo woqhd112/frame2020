@@ -9,7 +9,13 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<nav>
+		<a href="index.bit">HOME</a>
+		<a href="list.bit">B B S</a>
+		<a href="login.bit">LOGIN</a>
+	</nav>
 	<h1>리스트 페이지</h1>
+	<a href="add.bit">입 력</a>
 	<table>
 		<tr>
 			<th>사번</th>
@@ -22,10 +28,10 @@
 			for(Emp02Vo bean:list){
 		%>
 		<tr>
-			<td><%=bean.getSabun() %></td>
-			<td><%=bean.getName() %></td>
-			<td><%=bean.getNalja() %></td>
-			<td><%=bean.getPay() %></td>
+			<td><a href="detail.bit?sabun=<%=bean.getSabun() %>"><%=bean.getSabun() %></a></td>
+			<td><a href="detail.bit?sabun=<%=bean.getSabun() %>"><%=bean.getName() %></a></td>
+			<td><a href="detail.bit?sabun=<%=bean.getSabun() %>"><%=bean.getNalja() %></a></td>
+			<td><a href="detail.bit?sabun=<%=bean.getSabun() %>"><%=bean.getPay() %></a></td>
 		</tr>
 		<%} %>
 	</table>
