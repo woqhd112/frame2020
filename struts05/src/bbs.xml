@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+    
+    <struts>
+    	<package name="bbs" namespace="/bbs" extends="default">
+    		<action name="list" class="com.bit.action.ListAction">
+    			<result>/bbs/list.jsp</result>
+    		</action>
+    		<action name="add">
+    			<result>/bbs/add.jsp</result>
+    		</action>
+    		<action name="insert" class="com.bit.action.InsertAction">
+    			<interceptor-ref name="prepare"/>
+    			<interceptor-ref name="modelDriven"/>
+    			<interceptor-ref name="params"/>
+    			<interceptor-ref name="validation"/>
+    			<result name="input">/bbs/add.jsp</result>
+    			<result name="success" type="redirectAction">list</result>
+    		</action>
+    		<action name="detail" class="com.bit.action.OneAction">
+    			<interceptor-ref name="params"/>
+    			<result>/bbs/edit.jsp</result>
+    		</action>
+    		<action name="update" class="com.bit.action.UpdateAction">
+    			<interceptor-ref name="prepare"/>
+    			<interceptor-ref name="modelDriven"/>
+    			<interceptor-ref name="params"/>
+    			<interceptor-ref name="validation"/>
+    			<result name="input" type="redirect">/bbs/detail.bit?bean.sabun=${bean.sabun}</result>
+    			<result name="success" type="redirectAction">
+    				<param name="bean.sabun">${bean.sabun}</param>
+    				<param name="actionName">detail</param>
+    			</result>
+    		</action>
+    	</package>
+    </struts>

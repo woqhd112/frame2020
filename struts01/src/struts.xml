@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+    <struts>
+    	<package name="default" extends="struts-default">
+    		<action name="test01" class="com.bit.action.Ex01Action">	
+    			<result>/ex01.jsp</result>
+    		</action>
+    	</package>
+    </struts>
+    
+    <!-- action의 name 은 url주소 result가 파일명 class는 컨트롤러 -->

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="default" extends="struts-default">
+		<action name="ex01" class="com.bit.action.Ex01Action">
+			<result name="error">/err.jsp</result>
+			<result name="success">/ex01.jsp</result>
+		</action>
+		<action name="ex02" class="com.bit.action.Ex02Action">
+			<interceptor-ref name="params"></interceptor-ref>
+			<result name="error">/err.jsp</result>
+			<result name="success">/ex02.jsp</result>
+		</action>
+	</package>
+	<package name="p2" namespace="/test" extends="default">
+		<action name="ex01" class="com.bit.action.Ex03Action">
+			<result name="success">/ex03.jsp</result>
+		</action>
+		<action name="ex02" class="com.bit.action.Ex04Action">
+			<interceptor-ref name="params"></interceptor-ref>
+			<result type="redirect">/ex02.action?id=admin</result>
+		</action>
+	</package>
+</struts>
+
+<!-- 
+	인터셉터가 파라미터 넘기는것 컨트롤러에 셋터를 통해서 값을 가져옴 
+	컨트롤러 필드의 겟터셋터를 통해서 값을전달함
+	필터방식으로 넘어갈때 set을통해 넣고 나갈때 get을통해 가져옴 파라미터
+	
+	
+	패키지를 구분하는게 namespace 뎁스설정 서블릿맵핑작업  /*, /은 서블릿과 반대
+	namespace 설정을 안하면 url앞에 뎁스설정을 아무렇게나 쳐도 접속이됨(기본적으로 *)
+	설정해줘야함
+	
+	type은 디폴트로 dispatcher
+	타입을 redirect로 하면 redirect 함
+	
+-->
