@@ -13,12 +13,12 @@
 		<property name="dataSource" ref="dataSource"/>
 	</bean>
 	
-	<bean id="dao2" class="com.bit.model.Emp02Dao2">
+	<bean id="dao" class="com.bit.model.Emp02Dao2">
 		<property name="jdbcTemplate" ref="jdbcTemplate"/>
 	</bean>
-	<bean id="dao" class="com.bit.model.Emp02Dao">
+	<!-- <bean id="dao" class="com.bit.model.Emp02Dao">
 		<property name="dataSource" ref="dataSource"/>
-	</bean>
+	</bean> -->
 
 	<!-- HandlerMapping xml파일이나 properties 파일로 맵핑설정했었는데 그기능을 설정하는부분 여러개가있음-->
 	<bean id="handlerMapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"></bean>
@@ -27,7 +27,7 @@
 	name은 셋터를호출 ref는 위의 다오id-->
 	<bean name="/index.bit" class="com.bit.controller.IndexController"></bean>
 	<bean name="/list.bit" class="com.bit.controller.ListController">
-		<property name="dao" ref="dao2"/>
+		<property name="dao" ref="dao"/>
 	</bean>
 	<bean name="/add.bit" class="com.bit.controller.AddController"></bean>
 	<bean name="/insert.bit" class="com.bit.controller.InsertController">
