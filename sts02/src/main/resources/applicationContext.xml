@@ -6,8 +6,69 @@
 	<bean id="tv" class="com.bit.service.Tv"></bean>
 	<bean id="radio" class="com.bit.service.Radio"></bean>
 
-	<bean id="remote" class="com.bit.service.Remote">
-		<property name="remote" ref="radio"/>
+	<!-- <bean id="remote" class="com.bit.service.Remote">
+		셋터로 주입하는것
+		<property name="remote" ref="tv"/>
+		생성자로 주입하는것
+		<constructor-arg ref="tv"></constructor-arg>
+	</bean> -->
+	
+	<!--기본자료형
+	 <bean id="remote" class="com.bit.service.Remote2">
+		<property name="msg" value="abcdefg"/>
+		<property name="num" value="1000"/>
+		<property name="tf" value="true"/>
+	</bean> -->
+	
+	<!-- 스코프는 디폴트 싱글톤(req,session등 사용가능) -->
+	<bean id="remote" class="com.bit.service.Remote3" scope="singleton">
+		<!-- 스트링배열
+		<property name="arr">
+			<array>
+				<value>a</value>
+				<value>ab</value>
+				<value>abc</value>
+				<value>abcd</value>
+			</array>
+		</property> -->
+		<!-- 리스트타입
+		<property name="alist">
+			<list>
+				<value>1</value>
+				<value>12</value>
+				<value>123</value>
+				<value>1234</value>
+			</list>
+		</property> -->
+		<!-- 셋타입
+		<property name="set">
+			<set>
+				<value>a1</value>
+				<value>a2</value>
+				<value>a1</value>
+				<value>a3</value>
+			</set>
+		</property> -->
+		<!-- 맵자료구조- entry타입과 properties 타입 -->
+		<property name="map">
+			<!-- <map>
+				<entry key="key1">
+					<value>val1</value>
+				</entry>
+				<entry key="key2">
+					<value>val2</value>
+				</entry>
+				<entry key="key3">
+					<value>val3</value>
+				</entry>
+			</map> -->
+			<props>
+				<prop key="key1">value1</prop>
+				<prop key="key2">value2</prop>
+				<prop key="key3">value3</prop>
+				<prop key="key4">value4</prop>
+			</props>
+		</property>
 	</bean>
 
 </beans>
