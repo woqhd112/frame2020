@@ -12,5 +12,10 @@
 		<a href="list.bit">B B S</a>
 		<a href="login.bit">LOGIN</a>
 	</nav>
+	<div contentEditable="true">
+		<p>ㅎㅇㅎㅇ</p>
+		<img src="imgs/gh4.jpg" style="width:500px;"/>
+		<p>ㅂㅇㅂㅇ</p>
+	</div>
 </body>
 </html>

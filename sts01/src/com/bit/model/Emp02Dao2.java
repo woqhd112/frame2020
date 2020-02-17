@@ -12,6 +12,8 @@ import com.bit.model.entity.Emp02Vo;
 
 public class Emp02Dao2 extends JdbcDaoSupport{
 
+	
+	
 	public List<Emp02Vo> selectAll(){
 		
 		String sql="select * from emp02 order by sabun desc";
@@ -19,7 +21,7 @@ public class Emp02Dao2 extends JdbcDaoSupport{
 
 			@Override
 			public Emp02Vo mapRow(ResultSet rs, int rowNum) throws SQLException {
-				
+				System.out.println(rowNum);//로우의 인덱스번호
 				return new Emp02Vo(rs.getInt("sabun"),rs.getString("name"),rs.getDate("nalja"),rs.getInt("pay"));
 			}});
 	}
