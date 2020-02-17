@@ -1,0 +1,46 @@
+/.metadata/
+/.recommenders/
+sts02/.springBeans
+sts02/.settings/org.eclipse.core.resources.prefs
+sts02/.settings/org.eclipse.jdt.core.prefs
+sts02/.settings/org.eclipse.m2e.core.prefs
+sts02/src/test/java/com/bit/sts02/AppTest.java
+sts02/target/classes/applicationContext.xml
+sts02/target/classes/com/bit/plan/PlanJaba.class
+sts02/target/classes/com/bit/service/Machine.class
+sts02/target/classes/com/bit/service/Radio.class
+sts02/target/classes/com/bit/service/Remote.class
+sts02/target/classes/com/bit/service/Tv.class
+sts02/target/classes/com/bit/SpringJava/SpringJava.class
+sts02/target/classes/META-INF/MANIFEST.MF
+sts02/target/classes/META-INF/maven/com.bit/sts02/pom.properties
+sts02/target/classes/META-INF/maven/com.bit/sts02/pom.xml
+sts02/target/test-classes/com/bit/sts02/AppTest.class
+sts02/.classpath
+sts02/.project
+sts01/webapp/WEB-INF/.gitignore
+sts01/webapp/imgs/gh4.jpg
+sts01/.settings/org.eclipse.wst.common.project.facet.core.xml
+sts01/.settings/org.eclipse.wst.jsdt.ui.superType.container
+sts01/.settings/org.eclipse.wst.jsdt.ui.superType.name
+sts01/.settings/org.eclipse.wst.validation.prefs
+sts01/webapp/.gitignore
+sts01/.project
+sts01/.springBeans
+sts01/.settings/.jsdtscope
+sts01/.settings/org.eclipse.jdt.core.prefs
+sts01/.settings/org.eclipse.m2e.core.prefs
+sts01/.settings/org.eclipse.wst.common.component
+sts01/.classpath
+sts01/.gitignore
+Servers/Tomcat v8.0 Server at localhost-config/catalina.policy
+Servers/Tomcat v8.0 Server at localhost-config/catalina.properties
+Servers/Tomcat v8.0 Server at localhost-config/context.xml
+Servers/Tomcat v8.0 Server at localhost-config/server.xml
+Servers/Tomcat v8.0 Server at localhost-config/tomcat-users.xml
+Servers/Tomcat v8.0 Server at localhost-config/web.xml
+RemoteSystemsTempFiles/.project
+Servers/.project
+Servers/.settings/org.eclipse.wst.server.core.prefs
+sts02/target/classes/com/bit/service/Remote2.class
+sts02/target/classes/com/bit/service/Remote3.class
