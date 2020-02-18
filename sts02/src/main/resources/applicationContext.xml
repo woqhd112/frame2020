@@ -21,6 +21,9 @@
 		<property name="jdbcTemplate" ref="jdbcTemplate"/>
 	</bean>
 	
+	<bean id="empDao" class="com.bit.model.Emp01DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"/>
+	</bean>
 	
 	<!-- <bean id="tv" class="com.bit.service.Tv"></bean>
 	<bean id="radio" class="com.bit.service.Radio"></bean>
